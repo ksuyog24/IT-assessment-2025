@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Travel Plan</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>My Travel Diary</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="places.html">Places</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="table.html">Table</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- Main title for the table section -->
+  <h2>My Travel Plan</h2>
+   <!-- Button to dynamically add a new row to the table -->
+  <button id="addRowBtn">Add New Row</button>
+  <!-- Travel table displaying past destinations -->
+  <table class="travel-table" id="travelTable">
+    <thead>
+       <!-- Header row with merged cells -->
+      <tr>
+        <th rowspan="2">Destination</th>
+        <th colspan="2">Visited</th>
+        <th rowspan="2">Remarks</th>
+      </tr>
+      <tr>
+        <th>Month</th><!-- Sub-heading under "Visited" -->
+        <th>Year</th>
+      </tr>
+    </thead>
+    <tbody>
+     <!-- Each row below represents one travel destination --> 
+      <tr>
+        <td>Jarsingpauwa</td>
+        <td>Feb</td>
+        <td>2025</td>
+        <td>Beautiful hike!</td>
+      </tr>
+      <tr>
+        <td>Bajura</td>
+        <td>February</td>
+        <td>2024</td>
+        <td>Remote and peaceful.</td>
+      </tr>
+      <tr>
+        <td>Kalinchowk</td>
+        <td>March</td>
+        <td>2024</td>
+        <td>Snow and fun!</td>
+      </tr>
+      <tr>
+        <td>Ghandruk</td>
+        <td>Dec</td>
+        <td>2023</td>
+        <td>Great views of Annapurna!</td>
+      </tr>
+      <tr>
+        <td>Dodhara</td>
+        <td>Oct</td>
+        <td>2024</td>
+        <td>Longest bridge in Nepal!</td>
+      </tr>
+      <tr>
+        <td>Bardiya National Park</td>
+        <td>November</td>
+        <td>2024</td>
+        <td>Jungle safari and wildlife.</td>
+      </tr>
+      <tr>
+        <td>Kathmandu</td>
+        <td>December</td>
+        <td>2023</td>
+        <td>Beautiful scenery of hills and mountains.</td>
+      </tr>
+    </tbody>
+  </table>
+<!-- Linking external JavaScript file that contains logic to add new rows -->
+  <script src="table.js"></script>
+</body>
+</html>

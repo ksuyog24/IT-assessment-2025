@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact - My Travel Diary</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- JavaScript function to validate the contact form -->
+  <script>
+    function validateForm() {
+      // Get values from the form fields
+      const name = document.forms["contactForm"]["name"].value;
+      const email = document.forms["contactForm"]["email"].value;
+      const message = document.forms["contactForm"]["message"].value;
+ // Check if any field is empty
+      if (name == "" || email == "" || message == "") {
+        alert("All fields must be filled out!");
+        return false; // Prevent form submission
+      }
+// Regular expression to check email format
+      const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+      if (!email.match(emailPattern)) {
+        alert("Please enter a valid email address.");
+        return false;
+      }
+ // Show success message if everything is valid
+      alert("Thank you for contacting me!");
+      return true;
+    }
+  </script>
+</head>
+<body>
+
+  <!-- Page header with title and navigation menu -->
+
+  <header>
+    <h1>My Travel Diary</h1>
+    <nav>
+      <ul>
+        <!-- Navigation links to different pages -->
+        <li><a href="index.html">Home</a></li>
+        <li><a href="places.html">Places</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="table.html">Table</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Contact Me</h2>
+    <p>If you have any questions, feel free to contact me by filling out the form below.</p>
+  <!-- Contact form that triggers validation on submit -->
+    <form name="contactForm" onsubmit="return validateForm()" method="post">
+      <!-- Name input -->
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" name="name"><br><br>
+   <!-- Email input -->
+      <label for="email">Email:</label><br>
+      <input type="text" id="email" name="email"><br><br>
+ <!-- Message textarea -->
+      <label for="message">Message:</label><br>
+      <textarea id="message" name="message" rows="5" cols="30"></textarea><br><br>
+<!-- Submit button -->
+      <input type="submit" value="Send">
+    </form>
+  </main>
+
+  <footer>
+    <p>Created by <strong>Suyog Khadka</strong> </p> Email: <a href="mailto:suyogkhadka44@gmail.com">suyogkhadka44@gmail.com</a></p>
+  </footer>
+
+</body>
+</html>
